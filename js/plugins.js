@@ -1,17 +1,9 @@
-/*
- * jQuery Superfish Menu Plugin
- * Copyright (c) 2013 Joel Birch
- *
- * Dual licensed under the MIT and GPL licenses:
- *  http://www.opensource.org/licenses/mit-license.php
- *  http://www.gnu.org/licenses/gpl.html
- */
 
-(function ($) {
+;(function ($) {
     "use strict";
 
     var methods = (function () {
-        // private properties and methods go here
+
         var c = {
                 bcClass: 'sf-breadcrumb',
                 menuClass: 'sf-js-enabled',
@@ -21,7 +13,7 @@
             ios = (function () {
                 var ios = /iPhone|iPad|iPod/i.test(navigator.userAgent);
                 if (ios) {
-                    // iOS clicks only bubble as far as body children
+                    // iOS clicks 
                     $(window).load(function () {
                         $('body').children().on('click', $.noop);
                     });
